@@ -3,6 +3,7 @@ import logo from "../assets/logo.svg";
 import shootingStar from "../assets/shooting-star.svg";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Header from "../components/Header";
 
 const EditToken = () => {
   const {
@@ -73,15 +74,9 @@ const EditToken = () => {
 
   return (
     <div className="h-screen w-full bg-[#0F172A] pt-16 flex justify-center items-start">
-      <div className="flex flex-col gap-16 items-center justify-center w-full max-w-2xl">
-        <img src={logo} className="w-48" />
-        <div className="flex flex-row w-full justify-between items-center">
-          <div className="flex flex-row items-center gap-2">
-            <img src={shootingStar} className="w-14" />
-            <span className="text-4xl text-white font-bold">Wish Wallet</span>
-          </div>
-        </div>
-        <div className="w-full px-16">
+      <div className="w-full max-w-2xl">
+        <Header />
+        <div className="w-full px-16 pt-8">
           <div className="flex items-center justify-between w-full">
             <h1 className="text-2xl text-white font-bold">Edit Token</h1>
             <button
